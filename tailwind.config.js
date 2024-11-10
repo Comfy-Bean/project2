@@ -1,15 +1,13 @@
-import type { Config } from "tailwindcss";
-import typography from "@tailwindcss/typography";
-
+/** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{html,js,svelte,ts}"],
-
   theme: {
     extend: {
       colors: {
         primary: "#FFF8A7",
         secondary: "#BF3D3D",
         accent: "#FFFDF0",
+        hot: "#BF3D3D",
       },
       fontFamily: {
         dynapuff: ['"DynaPuff"', "sans-serif"],
@@ -21,6 +19,5 @@ export default {
       },
     },
   },
-
-  plugins: [typography],
-} as Config;
+  plugins: [],
+};
