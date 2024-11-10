@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { goto } from "$app/navigation";
   import ProductCard from "$lib/ProductCard.svelte";
 
   // Sample products data
@@ -92,7 +93,7 @@
   <div   
     class="ml-20 mt-20 max-sm:ml-0 max-sm:mt-10 flex gap-5 max-sm:justify-center "
   >
-    <a href="/project2/shop" class="text-white p-5 text-2xl max-sm:text-lg font-bold rounded-xl bg-red-500 shadow-md">
+    <a href="/project2/shop" style="background-color:#E9A557;" class="text-white p-5  text-2xl max-sm:text-lg font-bold rounded-xl  shadow-md">
       <h1>Shop Now!</h1>
     </a>
 
@@ -122,6 +123,15 @@
         <h3>{product.brand}</h3>
         <p class="content">{product.name}</p>
         <p class="price">₱{product.price}</p>
+        <button
+          class="cart-button"
+          onclick={() => {
+           
+            goto('/project2/shop'); // Replace '/project2' with the desired route
+          }}
+        >
+          Purchase
+        </button>
       </div>
     {/each}
   </div>
@@ -204,5 +214,20 @@
 
 .flex {
   padding-bottom: 10rem; /* Adjust the value as needed */
+}
+
+.cart-button {
+  background-color: #E9A557;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: revert;
+}
+
+.cart-button:hover {
+  background-color: #8607b8; /* slightly darker shade for hover effect */
 }
 </style>

@@ -280,7 +280,7 @@
               <i class="fa-solid fa-xmark"></i>
             </button>
 
-            <div class="w-full bg-accent overflow-hidden">
+            <div style="background-color:#E9A557 ;" class="w-full  overflow-hidden">
               <img
                 src={selectedProduct.image}
                 alt={selectedProduct.name}
@@ -299,11 +299,14 @@
                       {selectedProduct.brand}
                     </h3>
                   </div>
-                  <h2 class="text-red-600 text-lg md:text-3xl mb-4">
+                  <h2 
+                   style="color: #E9A557;"
+                  class=" text-lg md:text-3xl mb-4">
                     ₱{totalPrice.toFixed(2)}
                   </h2>
                   <button
-                    class="bg-hot text-white text-2xl py-1 px-10 font-primary mb-10"
+                  style="background-color: #E9A557; border-radius:10px;"
+                  class=" text-white text-2xl py-1 px-10 font-primary mb-10"
                     on:click={() => {
                       checkout = true;
                     }}>Purchase</button
@@ -346,7 +349,8 @@
                       <div class="flex items-center w-full md:w-auto">
                         <button
                           on:click={() => updateQuantity(-1)}
-                          class="px-3 py-2 bg-hot text-white rounded-lg text-lg"
+                           style="background-color: #E9A557;"
+                          class="px-3 py-2 text-white rounded-lg text-lg"
                           >-</button
                         >
                         <input
@@ -358,7 +362,8 @@
                         />
                         <button
                           on:click={() => updateQuantity(1)}
-                          class="px-3 py-2 bg-hot text-white rounded-lg text-lg"
+                          style="background-color: #E9A557; border-radius:10px;"
+                          class="px-3 py-2  text-white rounded-lg text-lg"
                           >+</button
                         >
                       </div>
@@ -430,7 +435,8 @@
                     <!-- CHECKOUT -->
                     <div class="flex justify-center">
                       <button
-                        class="bg-hot text-white px-6 py-2 text-lg"
+                          style="background-color: #E9A557; border-radius:10px;"
+                        class=" text-white px-6 py-2 text-lg"
                         type="submit"
                         >Checkout
                         <i class="ms-1 fa-solid fa-arrow-right"></i>

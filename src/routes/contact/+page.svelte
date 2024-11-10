@@ -36,7 +36,9 @@
   }
 </script>
 
-<section>
+<section style="
+ backdrop-filter: blur(50px);  font-family:'Crimson Text'; background-color: #E9A557; border-radius:10px;"
+>
   <!-- HEADER -->
   <div class="relative">
     <img
@@ -52,8 +54,13 @@
   <!-- CONTENT -->
   <div class="container mx-auto py-10">
     <form
-      on:submit|preventDefault={submitForm}
-      class="bg-white p-6 rounded-lg shadow-lg max-w-lg mx-auto"
+      on:submit|preventDefault={submitForm} 
+      style="font-family:'Crimson Text'; background: white;
+      border-shadow:(20px);
+    text-align: center;
+    font-size: 30px;
+    color: white;} "
+      class=" p-6 rounded-lg shadow-lg max-w-lg mx-auto"
     >
       <div class="mb-4">
         <label for="name" class="font-macondo text-black">Name:</label>
@@ -132,7 +139,7 @@
       </div>
       <button
         type="submit"
-        class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-500 transition duration-200"
+        class="bg-black text-white px-4 py-2 rounded-full hover:bg-green-500 transition duration-200"
         >Submit</button
       >
     </form>

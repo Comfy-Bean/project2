@@ -11,7 +11,7 @@
   class="p-4 sm:p-6 md:p-4 flex flex-col gap-4 rounded-lg border border-transparent hover:border-blue-700 cursor-pointer duration-200"
 >
   <!-- Icon Section -->
-  <div class="bg-accent h-[40vh] px-4 duration-200">
+  <div style="background-color: #E9A557; border-radius:10px;"  class="top[10px] h-[20vh] px-4 duration-200">
     <img src={product.image} alt={product.name} class="w-[200px] h-[200px]" />
   </div>
 
