@@ -25,8 +25,8 @@ export function validateForm(
 
   if (!phoneNumber.trim()) {
     errors.phoneNumber = "Phone number is required.";
-  } else if (!/^\d{9}$/.test(phoneNumber.replace(/\D/g, ""))) {
-    errors.phoneNumber = "Phone number must be exactly 9 digits long.";
+  } else if (!/^\d{10}$/.test(phoneNumber.replace(/\D/g, ""))) {
+    errors.phoneNumber = "Phone number must be exactly 10 digits long.";
   }
 
   if (!address.trim()) {
